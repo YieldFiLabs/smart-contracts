@@ -1,0 +1,47 @@
+{
+  "name": "vault-contracts",
+  "version": "1.0.0",
+  "description": "YieldFi contract",
+  "author": "dev@yield.fi",
+  "license": "BUSL-2.0",
+  "devDependencies": {
+    "@layerzerolabs/hardhat-tron": "^2.3.36",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.11",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.5",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/contracts-upgradeable": "^5.0.2",
+    "@openzeppelin/hardhat-upgrades": "^3.0.4",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.12",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.25",
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1",
+    "hardhat": "^2.22.13",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.12",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "local": "./node_modules/.bin/hardhat --config hardhat.config.ts node",
+    "test": "./node_modules/.bin/hardhat --config hardhat.config.ts test",
+    "compile": "./node_modules/.bin/hardhat --config hardhat.config.ts compile",
+    "clean": "./node_modules/.bin/hardhat --config hardhat.config.ts clean",
+    "console": "./node_modules/.bin/hardhat console --network localhost",
+    "coverage": "./node_modules/.bin/hardhat --config hardhat.config.ts coverage --solcoverjs .solcover.js",
+    "cc": "yarn clean && yarn compile",
+    "all": "yarn clean && yarn cc && yarn coverage"
+  },
+  "dependencies": {
+    "@layerzerolabs/oft-evm": "^0.1.0",
+    "tronweb": "^5.3.2"
+  }
+}
